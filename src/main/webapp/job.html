@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<script src="angular.min.js"></script>
+	<script src="angular-route.min.js"></script>
+</head>
+<body ng-app="app">
+<div ng-controller="jobController">
+	Position: {{job.position}}<br/>
+	Company: {{job.companyName}}<br />
+	<table>
+		<tr>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Score</th>
+		</tr>
+		<tr ng-repeat="user in job.users">
+			<td>{{user.firstName}}</td>
+			<td>{{user.lastName}}</td>
+			<td>{{user.score}}%</td>
+		</tr>
+	</table>
+</div>
+</body>
+<script src="job-controller.js"></script>
+</html>

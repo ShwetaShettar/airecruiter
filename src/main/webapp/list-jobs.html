@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<script src="angular.min.js"></script>
+	<script src="angular-route.min.js"></script>
+</head>
+<body ng-app="app">
+<div ng-controller="listJobsController">
+	<table>
+		<tr>
+			<th>Position</th>
+			<th>Company</th>
+		</tr>
+		<tr ng-repeat="job in jobs">
+			<td><a href="job.html?id={{job.idJob}}">{{job.position}}</a></td>
+			<td>{{job.companyName}}</td>
+		</tr>
+	</table>
+</div>
+</body>
+<script src="list-jobs-controller.js"></script>
+</html>
